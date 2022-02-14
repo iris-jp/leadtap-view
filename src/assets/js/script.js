@@ -147,8 +147,14 @@
       function addElement(n){
         var type = MirumakerEventData[n]['type'];
         if(type == 'single'){
+          var html_id = MirumakerEventData[n]['html_id'];
+          var html_id_str =""
+          if (html_id != "")
+          {
+            html_id_str = ' id="' + html_id +'" '
+          }
           $('div.mirumaker_movie_player-interactive_elements').append('<div class="mirumaker-buttons"><div class="js-closearea closearea"><div class="notice_close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div></div><div class="button-single button-single' + n + '"></div></div>');
-          $('div.button-single' + n).append('<div class="button-single_inner"><img src=""></div>');
+          $('div.button-single' + n).append('<div class="button-single_inner"><img src=""' + html_id_str + '></div>');
           $('div.button-single' + n +' div.button-single_inner img').attr('src', MirumakerEventData[n]['imagePath']);
 
           var h = $('#mirumaker_movie_play_videoid').height();
@@ -157,16 +163,35 @@
           setSingleButtonEvent(n);
 
         }else if(type == 'multiple'){
+          var html_id_a = MirumakerEventData[n]['html_id_a'];
+          var html_id_a_str =""
+          if (html_id_a != "")
+          {
+            html_id_a_str = ' id="' + html_id_a +'" '
+          }
+          var html_id_b = MirumakerEventData[n]['html_id_b'];
+          var html_id_b_str ="";
+          if (html_id_b != "")
+          {
+            html_id_b_str = ' id="' + html_id_b +'" ';
+          }  
+
           $('div.mirumaker_movie_player-interactive_elements').append('<div class="mirumaker-buttons button-multiple' + n + '"><div class="button-multiple_inner"><div class="button-type_01"></div><div class="button-type_02"></div></div></div>');
-          $('div.button-multiple' + n + ' div.button-type_01').append('<img src="">');
-          $('div.button-multiple' + n + ' div.button-type_02').append('<img src="">');
+          $('div.button-multiple' + n + ' div.button-type_01').append('<img src=""' + html_id_a_str + '>');
+          $('div.button-multiple' + n + ' div.button-type_02').append('<img src=""' + html_id_b_str + '>');
           $('div.button-multiple' + n +' div.button-type_01 img').attr('src', MirumakerEventData[n]['imagePath_a']);
           $('div.button-multiple' + n +' div.button-type_02 img').attr('src', MirumakerEventData[n]['imagePath_b']);
           setClickEvent(n);
 
         }else if(type == 'popup'){
+          var html_id = MirumakerEventData[n]['html_id'];
+          var html_id_str =""
+          if (html_id != "")
+          {
+            html_id_str = ' id="' + html_id +'" '
+          }
           $('div.mirumaker_movie_player-interactive_elements').append('<div class="mirumaker-buttons"><div class="js-closearea closearea"><div class="notice_close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div></div><div class="button-popup button-popup' + n + '"></div></div>');
-          $('div.button-popup' + n).append('<img src="">');
+          $('div.button-popup' + n).append('<img src=""' + html_id_str + '>');
           $('div.button-popup' + n +' img').attr('src', MirumakerEventData[n]['imagePath']);
           var h = $('div.mirumaker-buttons').height();
           $('div.closearea').css({'height': h });
