@@ -19,3 +19,8 @@ mirumaker.jsと同じ階層でmirumaker.cssを読み込むので、mirumaker.js�
 Code copyright 2019 Interlogic CO., LTD.  
 Code released under the MIT license  
 https://opensource.org/licenses/mit-license.php
+
+## nodeのバージョンについて
+開発時は以下の環境で作成している。
+$ node -v
+v11.0.0
