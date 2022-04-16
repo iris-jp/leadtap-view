@@ -50,8 +50,7 @@ code += '</div>';
 
         $('button.mirumaker_movie_player-close_button').click(function() {
             player.stop();
-            //player.increaseVolume(1);
-            // $('div.mirumaker_movie_player-interactive_elements').remove();
+            player.increaseVolume(1);
             $('div.mirumaker_movie_player-interactive_elements').hide();
             $('.mirumaker_movie_player').hide();
             eventFlag = false;

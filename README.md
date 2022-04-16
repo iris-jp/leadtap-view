@@ -1,10 +1,13 @@
 # リードタップviewer
 これはリードタップgeneratorで生成したコードでインタラクティブ動画を再生するためのツールになります。
 リードタップgeneratorの詳細については以下を参照お願いします。  
-[GitHub - iris-jp/leadtap-generator: インタラクティブ動画を作成するジェネレーター](https://github.com/iris-jp/leadtap-generator)
+[GitHub - iris-jp/leadtap-generator: インタラクティブ動画を作成するジェネレーター]
+(https://github.com/iris-jp/leadtap-generator)
 
 インタラクティブ動画のサンプルは以下になります。  
-[インタラクティブ動画サンプル](https://iris-jp.github.io/leadtap-view/dist/)  
+[インタラクティブ動画サンプル]
+(https://iris-jp.github.io/leadtap-view/dist/)  
+
 ※環境によって動画の読み込みに時間がかかることがあるので、クリック後に少々お待ちください。
 
 
